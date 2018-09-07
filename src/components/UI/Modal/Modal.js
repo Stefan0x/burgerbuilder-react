@@ -8,7 +8,7 @@ class modal extends Component {
   // Performance (Re-Rendering only if visible)
   // https://reactjs.org/docs/react-component.html#shouldcomponentupdate
   shouldComponentUpdate(nextProps, nextState) {
-    return this.props.show !== nextProps.show;
+    return this.props.show !== nextProps.show || this.props.children !== nextProps.children;
   }
 
   render() {
